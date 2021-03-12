@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id = app>
+            price is {{price}},
+            amount is {{amount}},
+            Total is {{price * amount}}
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return{
+                        price: 20,
+                        amount: 30
+                    }
+                }
+            }).mount("#app");
+
+        vm.$data.price = 10;
+
+
+
+        //Solution 2
+        //const vMountedInstance = vm.mount("#app");
+        //vMountedInstance.$data.price = 10;
+            
+
+        </script>
+
+    </body>
+
+    
+</html>

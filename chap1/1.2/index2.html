@@ -1,0 +1,53 @@
+<!--
+    1. Deep copy
+    2. template
+-->
+
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id=app1>
+        <input type = "text" v-model="name">
+    </div>
+    <div id=app2>
+        <input type = "text" v-model="name">
+    </div>
+
+    <script>
+
+        const dataObj = {
+            name: "JFON"
+        };
+
+        const vm1 = Vue.createApp({
+            data() {
+                return JSON.parse(JSON.stringify(dataObj))
+            } 
+        }).mount("#app1");
+
+        const vm2 = Vue.createApp({
+            data() {
+                return JSON.parse(JSON.stringify(dataObj))
+            } 
+        }).mount("#app2");
+
+        vm1.$data.name = "Hello"
+
+
+
+
+        //Solution 2
+        //const vMountedInstance = vm.mount("#app");
+        //vMountedInstance.$data.price = 10;
+
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id = app></div>
+        <script>
+            
+            const vm = Vue.createApp({
+                template: '{{greeting}}',
+                data(){
+                    return{
+                        greeting: "Hello Vue"
+                    }
+                }
+            }).mount('#app');
+            
+            /*
+            const vm = Vue.createApp({
+                template: `<div>{{ greeting }} 好棒棒!</div>`, 
+                data () { 
+                    return { 
+                        greeting: 'Hello Vue.js!' 
+                    } 
+                } 
+            }).mount('#app');
+            */
+
+        </script>
+
+    </body>
+
+    
+</html>
