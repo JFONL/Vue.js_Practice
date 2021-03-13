@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>textarea</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+        <div id = app>
+            <p>Multiline message is : {{message}}</p>
+            <textarea v-model = "message" placeholder="try to add multiple line"></textarea>
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return {
+                        message: ""
+                        
+                    }
+                }
+            }).mount("#app");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>指令directive</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+        <div id = app>
+            <div v-bind:id="customId"></div>
+            <button v-bind:disabled = "isBtnDisabled">click me!</button>
+            
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return {
+                        customId = "item-id-1",
+                        isBtnDisabled = true
+                    }
+                }
+            }).mount("#app");
+        </script>
+    </body>
+</html>
