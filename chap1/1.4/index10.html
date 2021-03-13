@@ -1,25 +1,20 @@
 <html>
     <head>
-        <title>radio</title>
+        <title>v-pre</title>
         <script src="https://unpkg.com/vue@next"></script>
     </head>
 
     <body>
         <div id = app>
-            <input id = "one" type = "radio" v-model = "picked" value = "1">
-            <label for = "one">One</label>
-
-            <input id = "two" type = "radio" v-model = "picked" value = "6">
-            <label for = "two">Two</label>
-
-            <p>Picked: {{picked}}</p>
+            <div v-pre>{{text}}</div>
+            <div>{{text}}</div>
         </div>
 
         <script>
             const vm = Vue.createApp({
                 data(){
                     return {
-                        picked: 1
+                        text: 'Hello'
                         
                     }
                 }

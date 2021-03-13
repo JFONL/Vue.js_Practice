@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>綁定樣式</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+        <div id = app>
+            <input type = "text" v-model.trim = "message" v-bind:class="{'error': message.length > 10}">
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return {
+                        message: ''
+                    }
+                }
+            }).mount("#app");
+        </script>
+    </body>
+</html>
