@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Computed</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+        <div id = explanation>Computed don't need ()</div>
+        <div id = app>
+            <p>The total price is {{subtotal}}</p>
+            <p>The total price is {{price * amount}}</p>
+            <p>The total price is {{price * amount}}</p>
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return{
+                        price: 10,
+                        amount: 20
+                    }
+                },
+                computed: {
+                    subtotal: function(){
+                        return this.price * this.amount;
+                    }
+                },
+            }).mount("#app");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Method v.s Computed</title>
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+
+    <body>
+        <div id = app>
+            <p>The total price is {{subtotalComputed}}</p>
+            <p>The total price is {{subtotalComputed}}</p>
+            <p>The total price is {{subtotalComputed}}</p>
+            <p>The total price is {{subtotalMethods ()}}</p>
+            <p>The total price is {{subtotalMethods ()}}</p>
+            <p>The total price is {{subtotalMethods ()}}</p>
+        </div>
+
+        <script>
+            const vm = Vue.createApp({
+                data(){
+                    return{
+                        price: 10,
+                        amount: 20
+                    }
+                },
+                methods: {
+                    subtotalMethods: function(){
+                        console.log("methods");
+                        return this.price * this.amount;
+                    }
+                },
+                computed: {
+                    subtotalComputed: function(){
+                        console.log("computed");
+                        return this.price * this.amount;
+                    }
+                }
+            }).mount("#app");
+        </script>
+    </body>
+</html>
